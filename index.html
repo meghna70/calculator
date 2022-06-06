@@ -1,68 +1,74 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Parcel Sandbox</title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="src/styles.css" />
-  </head>
-
-  <body>
-    <div id="app"></div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="calc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
     <div class="outer top-margin">
-      <div class="heading">
-        <h2>Calculator</h2>
-        <label class="switch">
-          <input type="checkbox" />
-          <span class="slider round"></span>
-        </label>
-      </div>
-      <div class="disp-screen"></div>
-      <div class="buttons">
-        <div class="nums">
-          <div class="row row1">
-            <button class="col 1"><p>AC</p></button>
-            <button class="col 2"><p>+/-</p></button>
-            <button class="col 3"><p>%</p></button>
-          </div>
-          <div class="row row2">
-            <button class="col 1"><p>1</p></button>
-            <button class="col 2"><p>2</p></button>
-            <button class="col 3"><p>3</p></button>
-          </div>
-          <div class="row row3">
-            <button class="col 1"><p>4</p></button>
-            <button class="col 2"><p>5</p></button>
-            <button class="col 3"><p>6</p></button>
-          </div>
-          <div class="row row4">
-            <button class="col 1"><p>7</p></button>
-            <button class="col 2"><p>8</p></button>
-            <button class="col 3"><p>9</p></button>
-          </div>
-          <div class="row row5">
-            <button id="spc-btn" class="col 1"><p>0</p></button>
-            <button class="col 2"><p>&#46;</p></button>
-          </div>
+        <div class="heading">
+           <h2> Calculator</h2>
+           <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
         </div>
-        <div class="operations">
-          <button class="col row1">
-            <p>&#247;</p>
-          </button>
-          <button class="col row2">
-            <p>&#215;</p>
-          </button>
-          <button class="col row3">
-            <p>&#8722;</p>
-          </button>
-          <button class="col row4">
-            <p>&#43;</p>
-          </button>
-          <button class="col row5">
-            <p>&#61;</p>
-          </button>
+        <div id="disp-screen">
+        <input type="text"  id="expression"  value="0"  disabled>
+        <input type="text" id="result" value="0" disabled >
         </div>
-      </div>
+        <div class="buttons">
+            <div class="nums">
+                <div class="row row1">
+                     <button class="col 1 ac non" id="ac" onclick="clearsc()"><p>AC</p></button>
+                     <button class="col 2 del non"><p>DEL</p></button>
+                     <button class="col 3 o "><p>%</p></button>
+                </div>
+                <div class="row row2">
+                    <!-- <input class="col 1 " type = "button" value = "1" onclick = "form1.answer.value += '1' ">   -->
+                    <button class="col n" value="1"><p>1</p></button> 
+                    <button class="col 2 n" value="2"><p>2</p></button>
+                    <button class="col 3 n" value="3"><p>3</p></button>
+                </div>
+                <div class="row row3">
+                    <button class="col 1 n" value="4"><p>4</p></button>
+                    <button class="col 2 n" value="5"><p>5</p></button>
+                    <button class="col 3 n" value="6"><p>6</p></button>
+                </div>
+                <div class="row row4">
+                    <button class="col 1 n" value="7"><p>7</p></button>
+                    <button class="col 2 n" value="8"><p>8</p></button>
+                    <button class="col 3 n" value="9"><p>9</p></button>
+                </div>
+                <div class="row row5">
+                
+                     <button id="spc-btn" class="col 1 n" value="0"><p>0</p></button>
+                     <button class="col 2 d" value="."><p>.</p></button>
+                </div>
+            </div>
+            <div class="operations">
+                <button class="col row1 o"  value="/">
+                    <p>/</p>
+                </button>
+                <button class="col row2 o" value="*">
+                    <p>*</p>
+                </button>
+                <button class="col row3 o" value="-">
+                    <p>-</p>
+                </button>
+                <button class="col row4 o" value="+">
+                    <p>+</p>
+                </button>
+                <button class="col row5 o equal non" value="=">
+                    <p>=</p>                 
+                </button>
+            </div>
+        </div>
     </div>
-    <script src="src/index.js"></script>
-  </body>
+</body>
+<script type="text/javascript" src="script.js" ></script> 
 </html>
